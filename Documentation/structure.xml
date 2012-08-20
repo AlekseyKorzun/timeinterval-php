@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project version="2.0.0a8" title="">
+  <file path="Interval.php" hash="434c5015b899deaa9b629991beb348e1" package="Default">
+    <namespace-alias name="DateTime">DateTime</namespace-alias>
+    <namespace-alias name="DateInterval">DateInterval</namespace-alias>
+    <class final="false" abstract="false" namespace="Time" line="16" package="Time">
+      <extends/>
+      <name>Interval</name>
+      <full_name>\Time\Interval</full_name>
+      <docblock line="7">
+        <description><![CDATA[Provides ability to interval a fluid time stamp.]]></description>
+        <long-description><![CDATA[]]></long-description>
+        <tag line="7" name="package" description="Time"/>
+        <tag line="7" name="license" description="MIT"/>
+        <tag line="7" name="author" description="Aleksey Korzun &lt;al.ko@webfoundation.net&gt;"/>
+        <tag line="7" name="link" description="http://alekseykorzun.com/post/7856565665/high-scalability-and-mysqls-now-dont-mix" link="http://alekseykorzun.com/post/7856565665/high-scalability-and-mysqls-now-dont-mix"/>
+        <tag line="7" name="link" description="http://www.alekseykorzun.com" link="http://www.alekseykorzun.com"/>
+      </docblock>
+      <property final="false" static="true" visibility="protected" line="23" namespace="Time" package="Default">
+        <name>$date</name>
+        <default><![CDATA[]]></default>
+        <docblock line="18">
+          <description><![CDATA[Instance of DateTime]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="18" name="var" description="" type="\DateTime">
+            <type by_reference="false">\DateTime</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="true" visibility="protected" line="30" namespace="Time" package="Default">
+        <name>$format</name>
+        <default><![CDATA[]]></default>
+        <docblock line="25">
+          <description><![CDATA[Format used for output, defaults to Y-m-d H:i:s via initialize]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="25" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="true" visibility="protected" namespace="Time" line="37" package="Time">
+        <name>initialize</name>
+        <full_name>initialize</full_name>
+        <docblock line="32">
+          <description><![CDATA[Initialize class if it was not previously initialized]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="32" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Time" line="57" package="Time">
+        <name>minutes</name>
+        <full_name>minutes</full_name>
+        <docblock line="51">
+          <description><![CDATA[Switch current time stamp to intervalled version]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="51" name="param" description="intervals (in minutes) that you wish to break the date out to" type="\DateInterval" variable="$interval">
+            <type by_reference="false">\DateInterval</type>
+          </tag>
+          <tag line="51" name="return" description="processed time stamp" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="57">
+          <name>$interval</name>
+          <default><![CDATA[]]></default>
+          <type>\DateInterval</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Time" line="81" package="Time">
+        <name>seconds</name>
+        <full_name>seconds</full_name>
+        <docblock line="75">
+          <description><![CDATA[Return processed version of current time stamp]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="75" name="param" description="intervals (in seconds) that you wish to break the date out to" type="\DateInterval" variable="$interval">
+            <type by_reference="false">\DateInterval</type>
+          </tag>
+          <tag line="75" name="return" description="processed time stamp" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="81">
+          <name>$interval</name>
+          <default><![CDATA[]]></default>
+          <type>\DateInterval</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Time" line="105" package="Time">
+        <name>setFormat</name>
+        <full_name>setFormat</full_name>
+        <docblock line="98">
+          <description><![CDATA[Sets new date format]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="98" name="see" description="\Time\http://www.php.net/manual/en/function.date.php" refers="\Time\http://www.php.net/manual/en/function.date.php"/>
+          <tag line="98" name="param" description="new date format to use" type="string" variable="$format">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="98" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="105">
+          <name>$format</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="protected" namespace="Time" line="117" package="Time">
+        <name>getFormat</name>
+        <full_name>getFormat</full_name>
+        <docblock line="110">
+          <description><![CDATA[Retrieves currently set date format with ability to overwrite certain
+parts of the date with a static number.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="110" name="param" description="convert specific format characters to a static '00'" type="string" variable="$swap">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="110" name="return" description="format" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="117">
+          <name>$swap</name>
+          <default><![CDATA[null]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="protected" namespace="Time" line="131" package="Time">
+        <name>hasMinutes</name>
+        <full_name>hasMinutes</full_name>
+        <docblock line="126">
+          <description><![CDATA[Checks if current format supports minutes]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="126" name="return" description="returns true if support is present" type="bool">
+            <type by_reference="false">bool</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="protected" namespace="Time" line="141" package="Time">
+        <name>hasSeconds</name>
+        <full_name>hasSeconds</full_name>
+        <docblock line="136">
+          <description><![CDATA[Checks if current format supports seconds]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="136" name="return" description="returns true if seconds are supported" type="bool">
+            <type by_reference="false">bool</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file Interval.php</error>
+    </parse_markers>
+  </file>
+  <package name="Default" full_name="Default"/>
+  <package name="Time" full_name="Time"/>
+  <namespace name="Time" full_name="Time"/>
+  <marker count="0">todo</marker>
+  <marker count="0">fixme</marker>
+  <deprecated count="0"/>
+</project>
