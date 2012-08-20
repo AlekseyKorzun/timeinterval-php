@@ -5,7 +5,7 @@ When developers optimize their applications, the usage of NOW() and other dynami
 
 The problem with using NOW() (and other identical methods) that the query will always be dynamic, which means that there will be no cache record within the database.
 
-This class allows you to create a smart intervals for current time allowing you to perform same look ups for specific intervals per multiple requests.
+This class allows you to create a static time intervals so you can perform same NOW() based look-ups per multiple requests.
 
 Usage
 -----
