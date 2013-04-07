@@ -1,9 +1,8 @@
 {
-	"name": "php/timeinterval",
-	"type": "scalability",
+	"name": "alekseykorzun/timeinterval-php",
 	"description": "A PHP 5 API client that allows you to interact with Rackspace® Cloud Servers™",
 	"keywords": ["scalability", "mysql", "c10k", "query", "load", "cache", "performance", "now", "php"],
-	"homepage": "https://github.com/AlekseyKorzun/php-cloudservers",
+	"homepage": "https://github.com/AlekseyKorzun/timeinterval-php",
 	"license": "MIT",
 	"authors": [
 		{
